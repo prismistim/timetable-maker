@@ -1,5 +1,9 @@
 $('#create').click(function (){
+  $('#sector2').css("display", "block");
+  $('#fillout').css("display", "inline-block");
+  $('#minireset').css("display", "inline-block");
   $('#result').css("display", "block");
+
 
   // 初期化
   $('#timetable').html('');
@@ -31,7 +35,7 @@ $('#create').click(function (){
   for(var i = 0; i < people; i++){
     table += '<tr>';
     table += '<td>' + date.format('HH:mm') + '</td>';
-    table += '<td><input type="text" class="djname" placeholder="名前 / 内容を入力"></td>';   
+    table += '<td><input name="content" type="text" class="djname" placeholder="名前 / 内容を入力"></td>';   
     date.add(interval, 'm');
   }
 
@@ -43,22 +47,27 @@ $('#create').click(function (){
   $('#resultPlace').append('at : ' + place);
   $('#timetable').append(table);
   $('#resultCredit').html('created by TTMaker');
-  $('#create').html('Update');
-  $('#fillout').removeAttr('disabled', 'disabled');
+  $('#create').html('更新');
 });
 
 $('#fillout').click( function(){
   $('.djname').css('border', '0');
+  $('#sector3').css("display", "block");
+  $('.control#ssave').css("display", "block");
   $('#save').removeAttr('disabled', 'disabled');
 });
 
 $('form').change(function (){
   $('#create').removeAttr('disabled', 'disabled');
-  $('#reset').removeAttr('disabled', 'disabled');
 });
 
 $('#reset').click(function (){
   $('#result').css("display", "none");
+  $('#minireset').css("display", "none");
+  $('#sector2').css("display", "none");
+  $('#check').css("display", "none");
+  $('#sector3').css("display", "none");
+  $('.control#ssave').css("display", "none");
 
   // htmlの出力を削除
   $('#timetable').html('');
@@ -67,6 +76,8 @@ $('#reset').click(function (){
   $('#resultTime').html('');
   $('#resultPlace').html('');
 
+  $("#preview").empty();
+
   // フォームの中身を削除
   $('form').find(':text').val('').end()
     .find('input[type="number"]').val('').end()
@@ -74,5 +85,9 @@ $('#reset').click(function (){
         .find('input[type="time"]').val('');
 
   // ボタンの状態を変更
-  $('#create').html('Create');
+  $('#create').html('作成');
 });
+
+$('#minireset').click(function (){
+  $('input[name="content"]').val('');
+})

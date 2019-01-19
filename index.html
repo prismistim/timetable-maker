@@ -85,7 +85,7 @@
       <button id="create" class="btn btn-primary" disabled>作成</button>
       <button id="reset" class="btn btn-danger">全てリセット</button>
     </div>
-    <h2 class="sector">2. 名前 / 内容を入力</h2>
+    <h2 class="sector" id="sector2">2. 名前 / 内容を入力</h2>
     <div id="result">
       <h2 id="resultTitle"></h2>
       <div class="result_info">
@@ -99,13 +99,14 @@
       <div id="timetable"></div>
       <div id="resultCredit"></div>
     </div>
-    <div class="control">
-      <button id="fillout" class="btn btn-info" disabled>確認する</button>
+    <div class="btn-box">
+      <button id="fillout" class="btn btn-info">確認</button>
+      <button id="minireset" class="btn btn-danger">リセット</button>
     </div>
-    <h2 class="sector">3. 確認して保存</h2>
+    <h2 class="sector" id="sector3">3. 確認して保存</h2>
     <div id="preview"></div>
-    <div class="control">
-      <button id="save" class="btn btn-success" disabled>保存する</button>
+    <div class="control" id="ssave">
+      <button id="save" class="btn btn-success" disabled>保存</button>
       <a id="dl" href="#"></a>
     </div>
   </div>

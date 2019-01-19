@@ -10,8 +10,12 @@ h2.sector{
   padding: 10px;
   font-size: 25px;
   background-color: #f0f0f0; 
-  border-left: solid 5px #2e3555;
+  border-left: solid 5px #dd0950;
   filter: drop-shadow(1px 3px 1px #cccccc);
+}
+
+#sector2, #sector3, #result, #fillout, #minireset, .control#ssave{
+  display: none;
 }
 
 .createzone{
@@ -36,7 +40,7 @@ td input{
   border-bottom: solid 1px rgba(170, 170, 170, 0.6);
 }
 
-button#create, button#reset{
+button#create, button#reset, button#fillout, button#minireset{
   width: 40%;
 }
 
@@ -55,8 +59,7 @@ button#create, button#reset{
 #result{
   display: none;
   width: 60%;
-  margin: auto;
-  margin-top: 20px;
+  margin: 20px auto;
   padding: 20px;
   background: #FEFEFE;
   filter: drop-shadow(3px 3px 3px #00000066)
@@ -67,7 +70,7 @@ button#create, button#reset{
 }
 
 #resultTitle{
-  border-left: solid 5px #2e3555;
+  border-left: solid 5px #dd0950;
   padding-left: 8px;
 }
 
@@ -111,7 +114,7 @@ a#dl{
   display: none;
 }
 
-#fillout, #save{
+#save{
   width: 60%;
   margin-left: 20%;
 }
