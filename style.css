@@ -64,8 +64,36 @@ td input{
 }
 
 #resultCredit{
+  margin-top: 10px;
   text-align: right;
   font-weight: 300;
   font-style: itaric;
 }
 
+.control{
+  margin-top: 20px;
+}
+
+a#dl, #preview{
+  display: none;
+}
+
+@media screen and (max-width:800px){
+  #result{
+    width: 100%;
+  }
+
+  td input{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:500px){
+  #result{
+    width: 100%;
+  }
+
+  td input{
+    width: 90%;
+  }
+}

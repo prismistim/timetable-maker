@@ -4,6 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- SEO -->
+  <meta name="author" content="TimeTable Maker">
+  <meta name="description" content="You can make a simple timetable more easliy.">
+  <meta name="keywords" content="snowsphere, TimeTable">
+  <title>TimeTable Maker</title>
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Prismist_M">
+
+  <!-- OG -->
+  <meta property="og:url" content="https://prismistim.github.io/timetable-maker/index.html">
+  <meta property="og:title" content="TimeTable Maker">
+  <meta property="og:description" content="You can make a simple timetable more easliy.">
+  <meta property="og:image" content="https://prismistim.github.io/timetable-maker/img/ogp.jpg">
+  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
@@ -79,8 +96,11 @@
       <div id="timetable"></div>
       <div id="resultCredit"></div>
     </div>
-    <div id="preview"></div>
-    <button id="save" class="btn btn-success btn-block">Save as Image</button>
+    <div class="control">
+      <button id="save" class="btn btn-success btn-block">Save as Image</button>
+      <div id="preview"></div>
+      <a id="dl" href="#"></a>
+    </div>
   </div>
   <div class="footer">© 2019 snowsphere</div>
   <script src="./lib/moment.min.js"></script>
