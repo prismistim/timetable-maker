@@ -65,7 +65,7 @@ $('#reset').click(function (){
   $('#result').css("display", "none");
   $('#minireset').css("display", "none");
   $('#sector2').css("display", "none");
-  $('#check').css("display", "none");
+  $('#fillout').css("display", "none");
   $('#sector3').css("display", "none");
   $('.control#ssave').css("display", "none");
 
