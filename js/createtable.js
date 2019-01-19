@@ -1,4 +1,6 @@
 $('#create').click(function (){
+  $('#result').css("display", "block");
+
   // 初期化
   $('#timetable').html('');
   $('#resultTitle').html('');
@@ -17,34 +19,37 @@ $('#create').click(function (){
 
   // var bufdate = eventDate.replace(/-/g, '/');
   var date = moment(eventDate + ' ' + startTime);
-  date.format('HH:mm:ss');
-  console.log(date);
 
   time = date.format('HH:mm');
 
   table += '<table class="timetable">';
   table += '<thead><tr>';
   table += '<th>Time</th>';
-  table += '<th>Name</th>';
+  table += '<th>Name / Contents</th>';
   table += '</tr></thead><tbody>';
   
   for(var i = 0; i < people; i++){
     table += '<tr>';
     table += '<td>' + date.format('HH:mm') + '</td>';
-    table += '<td><input type="text" class="djname"></td>';   
+    table += '<td><input type="text" class="djname" placeholder="名前 / 内容を入力"></td>';   
     date.add(interval, 'm');
-    console.log(date);
   }
 
   table += '</tbody>';
 
   $('#resultTitle').append(eventTitle);
   $('#resultDate').append(eventDate);
-  $('#resultTime').html('start ' + time);
-  $('#resultPlace').append('at ' + place);
+  $('#resultTime').html('start : ' + time);
+  $('#resultPlace').append('at : ' + place);
   $('#timetable').append(table);
   $('#resultCredit').html('created by TTMaker');
   $('#create').html('Update');
+  $('#fillout').removeAttr('disabled', 'disabled');
+});
+
+$('#fillout').click( function(){
+  $('.djname').css('border', '0');
+  $('#save').removeAttr('disabled', 'disabled');
 });
 
 $('form').change(function (){
@@ -53,10 +58,13 @@ $('form').change(function (){
 });
 
 $('#reset').click(function (){
+  $('#result').css("display", "none");
+
   // htmlの出力を削除
   $('#timetable').html('');
   $('#resultTitle').html('');
   $('#resultDate').html('');
+  $('#resultTime').html('');
   $('#resultPlace').html('');
 
   // フォームの中身を削除
@@ -66,6 +74,5 @@ $('#reset').click(function (){
         .find('input[type="time"]').val('');
 
   // ボタンの状態を変更
-  $('#reset').attr('disabled', 'disabled');
   $('#create').html('Create');
 });

@@ -36,21 +36,21 @@
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="page_title">TimeTable Maker</h1>
-      <p class="lead">You can make a simple timetable more easliy.</p>
+      <p class="lead">シンプルなタイムテーブルがより簡単に作成できます。</p>
     </div>
   </div>
   <div class="container">
+    <h2 class="sector">1. 基本情報を入力</h2>
     <div class="createzone">
-      <h2 class="sector">input information</h2>
       <form name="infoForm">
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">
-              <label for="eventTitle">Event title</label>
+              <label for="eventTitle">イベント名</label>
               <input name="eventTitle" type="text" class="form-controll" id="eventTitle" placeholder="Event Title">
             </div>
             <div class="col-sm-6">
-              <label for="eventPlace">Place</label>
+              <label for="eventPlace">場所</label>
               <input name="evenPlace" type="text" class="form-controll" id="eventPlace" placeholder="Event place">    
             </div>
           </div>
@@ -58,11 +58,11 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">          
-              <label for="eventDate">Date</label>
+              <label for="eventDate">日付</label>
               <input name="eventDate" type="date" class="form-controll" id="eventDate" placeholder="Date">
             </div>
             <div class="col-sm-6">
-              <label for="startTime">Start Time</label>
+              <label for="startTime">開始時間</label>
               <input name="startTime" type="time" class="form-controll" id="startTime" placeholder="Start Time">
             </div>
           </div>
@@ -70,19 +70,22 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-6">        
-              <label for="howmanyDJ">Performers</label>
+              <label for="howmanyDJ">出演人数(ターム数)</label>
               <input name="howmanyDJ" type="number" class="form-controll" id="howmanyDJ" placeholder="Enter Number" min="1">
             </div>
             <div class="col-sm-6">        
-              <label for="interval">Interval(minutes)</label>
-              <input name="interval" type="number" class="form-controll" id="interval" placeholder="interval time">
+              <label for="interval">間隔(分)</label>
+              <input name="interval" type="number" class="form-controll" id="interval" placeholder="interval time" min="0">
             </div>
           </div>
         </div>
       </form>   
     </div>
-    <button id="create" class="btn btn-primary" disabled>Create</button>
-    <button id="reset" class="btn btn-danger" disabled>All Reset</button>
+    <div class="btn-box">
+      <button id="create" class="btn btn-primary" disabled>作成</button>
+      <button id="reset" class="btn btn-danger">全てリセット</button>
+    </div>
+    <h2 class="sector">2. 名前 / 内容を入力</h2>
     <div id="result">
       <h2 id="resultTitle"></h2>
       <div class="result_info">
@@ -97,8 +100,12 @@
       <div id="resultCredit"></div>
     </div>
     <div class="control">
-      <button id="save" class="btn btn-success btn-block">Save as Image</button>
-      <div id="preview"></div>
+      <button id="fillout" class="btn btn-info" disabled>確認する</button>
+    </div>
+    <h2 class="sector">3. 確認して保存</h2>
+    <div id="preview"></div>
+    <div class="control">
+      <button id="save" class="btn btn-success" disabled>保存する</button>
       <a id="dl" href="#"></a>
     </div>
   </div>

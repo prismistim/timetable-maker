@@ -5,6 +5,14 @@ body{
   font-family: 'Roboto', 'Noto Sans JP', sans-serif;
 }
 
+h2.sector{
+  margin: 20px 0;
+  padding: 10px;
+  font-size: 25px;
+  background-color: #f0f0f0; 
+  border-left: solid 5px #2e3555;
+  filter: drop-shadow(1px 3px 1px #cccccc);
+}
 
 .createzone{
   padding: 15px;
@@ -18,14 +26,22 @@ label{
 
 .createzone input{
   padding: 3px;
-  border: solid 1px rgba(170, 170, 170, 0.6);
-  border-radius: 5px;
+  border: 0;
+  border-bottom: solid 3px rgba(170, 170, 170, 0.6);
 }
 
 td input{
   padding: 3px;
   border: 0;
   border-bottom: solid 1px rgba(170, 170, 170, 0.6);
+}
+
+button#create, button#reset{
+  width: 40%;
+}
+
+.btn-box{
+  margin-left: 15%;
 }
 
 .footer{
@@ -37,6 +53,7 @@ td input{
 }
 
 #result{
+  display: none;
   width: 60%;
   margin: auto;
   margin-top: 20px;
@@ -49,18 +66,29 @@ td input{
   margin-bottom: 10px;
 }
 
-#resultDate, #resultTime{
+#resultTitle{
+  border-left: solid 5px #2e3555;
+  padding-left: 8px;
+}
+
+#resultDate, #resultTime {
   float: left;
   margin-right: 15px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 #resultPlace{
-  font-weight: 300;
+  font-weight: 500;
 }
 
 #timetable td{
   width: 300px;
+  padding-left: 10px;
+}
+
+td input.cInterval{
+  border: solid 1px #999999;
+  padding: 10px;
 }
 
 #resultCredit{
@@ -68,14 +96,24 @@ td input{
   text-align: right;
   font-weight: 300;
   font-style: itaric;
+  font-size: 10px;
 }
 
 .control{
   margin-top: 20px;
 }
 
-a#dl, #preview{
+#preview{
+  text-align: center;
+}
+
+a#dl{
   display: none;
+}
+
+#fillout, #save{
+  width: 60%;
+  margin-left: 20%;
 }
 
 @media screen and (max-width:800px){

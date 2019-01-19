@@ -1,4 +1,11 @@
 $(function(){
+  $("#fillout").on('click', function(){
+    html2canvas(document.querySelector("#result")).then(function(canvas){
+       $("#preview").empty();
+       $("#preview").append(canvas);
+    });
+ });
+
   $('#save').on('click', function() {
     html2canvas(document.querySelector('#result')).then(canvas => {
       var image = canvas.toDataURL('image/png');
