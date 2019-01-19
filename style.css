@@ -14,6 +14,10 @@ h2.sector{
   filter: drop-shadow(1px 3px 1px #cccccc);
 }
 
+button{
+  font-size: 12px;
+}
+
 #sector2, #sector3, #result, #fillout, #minireset, .control#ssave{
   display: none;
 }
