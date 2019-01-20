@@ -8,7 +8,7 @@ body{
 h2.sector{
   margin: 20px 0;
   padding: 10px;
-  font-size: 25px;
+  font-size: 20px;
   background-color: #f0f0f0; 
   border-left: solid 5px #dd0950;
   filter: drop-shadow(1px 3px 1px #cccccc);
@@ -30,6 +30,22 @@ a:hover{
 
 #sector2, #sector3, #result, #fillout, #minireset, .control#ssave{
   display: none;
+}
+
+.twitter-button{
+  width: 130px;
+  padding: 5px;
+  font-size: 15px;
+  color: #FEFEFE;
+  background-color: #1da1f2;
+}
+
+.twitter-button i.fa-twitter{
+  font-size: 20px;
+}
+
+a.twitter-button:hover{
+  color: #dbdbdb;
 }
 
 .createzone{
