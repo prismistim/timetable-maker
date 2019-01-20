@@ -18,6 +18,16 @@ button{
   font-size: 12px;
 }
 
+a{
+  color: #FEFEFE;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #333333;
+  text-decoration: none;
+}
+
 #sector2, #sector3, #result, #fillout, #minireset, .control#ssave{
   display: none;
 }
@@ -121,6 +131,11 @@ a#dl{
 #save{
   width: 60%;
   margin-left: 20%;
+}
+
+a i.fa-github, i.fa-twitter{
+  font-size: 30px;
+  margin: 5px 2px;
 }
 
 @media screen and (max-width:800px){
